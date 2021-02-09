@@ -1,0 +1,6 @@
+FROM python:3
+MAINTAINER Gehaxelt <docker@gehaxelt.in>
+
+RUN pip3 install tld
+
+CMD python3 -u /code/fpmon/scripts/server.simple.py

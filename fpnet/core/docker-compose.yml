@@ -1,0 +1,734 @@
+version: '3.7'
+
+services:
+  fpnet_scanner:
+    container_name: fpnet_scanner
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_scanner
+    restart: "no"
+    volumes:
+      - ./data:/data
+      - ./code:/code
+      - ./code/fpmon/:/fpmon/
+      - /tmp/chrome:/tmp/chrome/
+    environment:
+      - PYTHONUNBUFFERED=1
+    links:
+      - fpnet_monitor
+      - chrome1
+      - chrome2
+      - chrome3
+      - chrome4
+      - chrome5
+      - chrome6
+      - chrome7
+      - chrome8
+      - chrome9
+      - chrome10
+      - chrome11
+      - chrome12
+      - chrome13
+      - chrome14
+      - chrome15
+      - chrome16
+      - chrome17
+      - chrome18
+      - chrome19
+      - chrome20
+      - proxy1
+      - proxy2
+      - proxy3
+      - proxy4
+      - proxy5
+      - proxy6
+      - proxy7
+      - proxy8
+      - proxy9
+      - proxy10
+      - proxy11
+      - proxy12
+      - proxy13
+      - proxy14
+      - proxy15
+      - proxy16
+      - proxy17
+      - proxy18
+      - proxy19
+      - proxy20
+
+  fpnet_monitor:
+    container_name: fpnet_monitor
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_monitor
+    restart: "no"
+    ports:
+      - 8898:8898
+    volumes:
+      - ./data:/data
+      - ./logs:/logs
+      - ./code:/code
+      - ./code/fpmon/:/fpmon/
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  proxy1:
+    container_name: proxy1
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy2:
+    container_name: proxy2
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy3:
+    container_name: proxy3
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy4:
+    container_name: proxy4
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy5:
+    container_name: proxy5
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy6:
+    container_name: proxy6
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy7:
+    container_name: proxy7
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy8:
+    container_name: proxy8
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy9:
+    container_name: proxy9
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy10:
+    container_name: proxy10
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy11:
+    container_name: proxy11
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy12:
+    container_name: proxy12
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy13:
+    container_name: proxy13
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy14:
+    container_name: proxy14
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy15:
+    container_name: proxy15
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy16:
+    container_name: proxy16
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy17:
+    container_name: proxy17
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy18:
+    container_name: proxy18
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy19:
+    container_name: proxy19
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  proxy20:
+    container_name: proxy20
+    build:
+      context: .
+      dockerfile: Dockerfile.fpnet_proxy
+    restart: "no"
+    volumes:
+      - ./code:/code
+      - /tmp/chrome:/tmp/chrome
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LC_ALL=C
+      - FPNET_SAVE_PATH=/tmp/chrome/
+
+  chrome1:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy1
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5901:5900
+
+  chrome2:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy2
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5902:5900
+
+  chrome3:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy3
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5903:5900
+
+  chrome4:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy4
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5904:5900
+
+  chrome5:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy5
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5905:5900
+
+  chrome6:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy6
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5906:5900
+
+  chrome7:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy7
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5907:5900
+
+  chrome8:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy8
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5908:5900
+
+  chrome9:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy9
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5909:5900
+
+  chrome10:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy10
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5910:5900
+
+  chrome11:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy11
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5911:5900
+
+  chrome12:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy12
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5912:5900
+
+  chrome13:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy13
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5913:5900
+
+  chrome14:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy14
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5914:5900
+
+  chrome15:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy15
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5915:5900
+
+  chrome16:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy16
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5916:5900
+
+  chrome17:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy17
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5917:5900
+
+  chrome18:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy18
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5918:5900
+
+  chrome19:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy19
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5919:5900
+
+  chrome20:
+    image: selenium/standalone-chrome-debug:3.141.59
+    volumes:
+      - ./code/fpmon/:/fpmon/
+      - /dev/shm:/dev/shm
+      - /tmp/chrome:/tmp/chrome/
+    links:
+      - fpnet_monitor
+      - proxy20
+    environment:
+      - SE_OPTS=-browserTimeout 90 -timeout 120 -port 5555 -debug
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=96
+      - VNC_NO_PASSWORD=1
+    ports:
+      - 5920:5900

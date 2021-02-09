@@ -1,0 +1,296 @@
+version: '3.7'
+
+services:
+  js_eval2:
+    container_name: js_eval2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: "no"
+    volumes:
+      - ./data:/data
+      - ./code:/code
+    depends_on:
+      - hub
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  hub:
+    image: selenium/hub:3.141.59
+    ports:
+      - 4444:4444
+
+  firefox1:
+    image: selenium/node-firefox:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+
+  chrome1:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome2:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome3:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome4:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome5:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome6:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+
+  chrome7:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+
+  chrome8:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+
+  chrome9:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+
+  chrome10:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome11:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome12:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome13:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome14:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome15:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome16:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome17:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome18:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome19:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome20:
+    image: selenium/node-chrome:3.141.59
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm

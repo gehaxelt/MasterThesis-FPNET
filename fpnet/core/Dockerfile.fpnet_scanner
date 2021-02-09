@@ -1,0 +1,8 @@
+FROM python:3
+MAINTAINER Gehaxelt <docker@gehaxelt.in>
+
+RUN pip3 install selenium
+RUN pip3 install requests 
+RUN pip3 install vncdotool IPython
+
+CMD python3 -u /code/browser.py
